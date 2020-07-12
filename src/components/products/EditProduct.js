@@ -60,11 +60,11 @@ function EditProduct(props) {
         <img src={imgUrl ? imgUrl : 'https://via.placeholder.com/200'} style={styleImg} alt={productName} />
         <form className="login-form">
           <div className="form-group">
-            <label  className="text-uppercase">Product name</label>
+            <label  className="text-uppercase">Tên sản phẩm</label>
             <input type="text" className="form-control" defaultValue={productName} onChange={(e) => {setProductName(e.target.value)}} required/>
           </div>
           <div className="form-group">
-            <label  className="text-uppercase">Tên sản phẩm</label>
+            <label  className="text-uppercase">Giá sản phẩm</label>
             <input type="text" className="form-control" defaultValue={productPrice}  onChange={(e) =>{setProductPrice(e.target.value.replace(/[^a-zA-Z0-9 ]/g, ""))}}required/>
           </div>
           <div className="form-group">

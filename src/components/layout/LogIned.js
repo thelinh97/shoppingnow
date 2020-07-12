@@ -25,7 +25,6 @@ function LogIned(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-warning">
           {auth.user ?  <Link className="navbar-brand" to="/inventory">Inventory Management</Link> : null}
-       
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -53,7 +52,6 @@ function LogIned(props) {
               <option value={500*1000}> Dưới 500.000đ</option>
               <option value={1000*1000}> Dưới 1.000.000đ</option>
             </select>
-
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">

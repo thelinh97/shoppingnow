@@ -30,11 +30,11 @@ function UpdateInfoProduct(props) {
 
    const handleSubmit =  () => {
     if(productName !== '' && productPrice !== '' && productAmount !== '' && imgUrl !== ''){
-      database.updateProduct(productAmount, imgUrl, productName, productPrice);
-      setProductAmount('');
-      setProductName('');
-      setProductPrice('');
-      setImgUrl('')
+      database.addProduct( productName, imgUrl,productAmount, productPrice);
+      // setProductAmount('');
+      // setProductName('');
+      // setProductPrice('');
+      // setImgUrl('')
      }else { alert('Điền thông đầy đủ thông tin sản phẩm')};
    }
     
