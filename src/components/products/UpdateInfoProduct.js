@@ -11,8 +11,10 @@ function UpdateInfoProduct(props) {
     const [productAmount, setProductAmount] = useState('');
     const [nameImg, setNameImg] = useState('');
     const [imgUrl, setImgUrl] = useState('');
+    const [status, setStatus] = useState(false)
 
     const uploadImg = (e) =>{
+     
       const img = e.target.files[0];
       setNameImg(img.name)
       var uploadTask = storage.ref(`img/${img.name}`).put(img);
@@ -31,10 +33,7 @@ function UpdateInfoProduct(props) {
    const handleSubmit =  () => {
     if(productName !== '' && productPrice !== '' && productAmount !== '' && imgUrl !== ''){
       database.addProduct( productName, imgUrl,productAmount, productPrice);
-      // setProductAmount('');
-      // setProductName('');
-      // setProductPrice('');
-      // setImgUrl('')
+      setStatus(!status)
      }else { alert('Điền thông đầy đủ thông tin sản phẩm')};
    }
     
@@ -42,6 +41,13 @@ function UpdateInfoProduct(props) {
     width : '200px',
     height: '200px'
   }
+
+  useEffect(()=>{
+    setProductAmount('');
+    setProductName('');
+    setProductPrice('');
+    setImgUrl('')
+  },[status])
 
     return (
        <div className="col-4 login-block">
