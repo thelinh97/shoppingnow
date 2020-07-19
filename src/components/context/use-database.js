@@ -128,6 +128,7 @@ export function ProvideDatabase({ children }) {
         updateProduct,
         edit,
         editStatus,
+        setEditStatus,
         deleteProduct
     }
       

@@ -56,6 +56,7 @@ function EditProduct(props) {
   <div className="container">
     <div className="row ">
       <div className="col login-sec">
+      <h4 className="text-center mb-5" onClick={() => { database.setEditStatus(false)}}>Thêm sản phẩm</h4>
         <h2 className="text-center">Sửa thông tin sản phẩm</h2>
         <img src={imgUrl ? imgUrl : 'https://via.placeholder.com/200'} style={styleImg} alt={productName} />
         <form className="login-form">

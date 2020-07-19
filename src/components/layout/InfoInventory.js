@@ -40,7 +40,7 @@ function InfoInventory(props) {
     <td>số sản phẩm tồn kho:</td>
     <td>{amountInventory}</td>
     <td>Tiền tồn kho:</td>
-    <td>{inventoryMoney}</td>
+    <td>{inventoryMoney}vnđ</td>
     </tr>
   </tbody>
 </table>
